@@ -25,16 +25,16 @@ $(call inherit-product, build/target/product/full.mk)
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/samsung/vivalto3gvndx/init.scx15_ss.rc:root/init.scx15_ss.rc \
-	device/samsung/vivalto3gvndx/init.vivalto3gvn.rc:root/init.vivalto3gvn.rc \
-	device/samsung/vivalto3gvndx/init.vivalto3gvn_base.rc:root/init.vivalto3gvn_base.rc \
-	device/samsung/vivalto3gvndx/init.wifi.rc:root/init.wifi.rc \
-	device/samsung/vivalto3gvndx/fstab.scx15:root/fstab.scx15 \
-	device/samsung/vivalto3gvndx/init.board.rc:root/init.board.rc \
-	device/samsung/vivalto3gvndx/init.scx15.rc:root/init.scx15.rc \
-	device/samsung/vivalto3gvndx/init.scx15.usb.rc:root/init.scx15.usb.rc \
-	device/samsung/vivalto3gvndx/ueventd.scx15.rc:root/ueventd.scx15.rc \
-        device/samsung/vivalto3gvndx/init.recovery.scx15.rc:root/init.recovery.scx15.rc
+	device/samsung/vivalto3gvndx/rootdir/init.scx15_ss.rc:root/init.scx15_ss.rc \
+	device/samsung/vivalto3gvndx/rootdir/init.vivalto3gvn.rc:root/init.vivalto3gvn.rc \
+	device/samsung/vivalto3gvndx/rootdir/init.vivalto3gvn_base.rc:root/init.vivalto3gvn_base.rc \
+	device/samsung/vivalto3gvndx/rootdir/init.wifi.rc:root/init.wifi.rc \
+	device/samsung/vivalto3gvndx/rootdir/fstab.scx15:root/fstab.scx15 \
+	device/samsung/vivalto3gvndx/rootdir/init.board.rc:root/init.board.rc \
+	device/samsung/vivalto3gvndx/rootdir/init.scx15.rc:root/init.scx15.rc \
+	device/samsung/vivalto3gvndx/rootdir/init.scx15.usb.rc:root/init.scx15.usb.rc \
+	device/samsung/vivalto3gvndx/rootdir/ueventd.scx15.rc:root/ueventd.scx15.rc \
+        device/samsung/vivalto3gvndx/rootdir/init.recovery.scx15.rc:root/init.recovery.scx15.rc
 
 PRODUCT_COPY_FILES += \
     	device/samsung/vivalto3gvndx/rootdir/etc/extra.fstab:recovery/root/etc/extra.fstab
