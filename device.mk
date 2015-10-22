@@ -1,8 +1,8 @@
-LOCAL_PATH := device/samsung/vivalto3gvndx
+LOCAL_PATH := device/samsung/vivalto3gvn
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/vivalto3gvndx/vivalto3gvndx-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/vivalto-common/vivalto-common-vendor.mk)
 
 # overrlay import
 #DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay       #currently disabled arent where we improve this to ride up
@@ -25,19 +25,19 @@ $(call inherit-product, build/target/product/full.mk)
 
 # Init files
 PRODUCT_COPY_FILES += \
-	device/samsung/vivalto3gvndx/rootdir/init.scx15_ss.rc:root/init.scx15_ss.rc \
-	device/samsung/vivalto3gvndx/rootdir/init.vivalto3gvn.rc:root/init.vivalto3gvn.rc \
-	device/samsung/vivalto3gvndx/rootdir/init.vivalto3gvn_base.rc:root/init.vivalto3gvn_base.rc \
-	device/samsung/vivalto3gvndx/rootdir/init.wifi.rc:root/init.wifi.rc \
-	device/samsung/vivalto3gvndx/rootdir/fstab.scx15:root/fstab.scx15 \
-	device/samsung/vivalto3gvndx/rootdir/init.board.rc:root/init.board.rc \
-	device/samsung/vivalto3gvndx/rootdir/init.scx15.rc:root/init.scx15.rc \
-	device/samsung/vivalto3gvndx/rootdir/init.scx15.usb.rc:root/init.scx15.usb.rc \
-	device/samsung/vivalto3gvndx/rootdir/ueventd.scx15.rc:root/ueventd.scx15.rc \
-        device/samsung/vivalto3gvndx/rootdir/init.recovery.scx15.rc:root/init.recovery.scx15.rc
+	device/samsung/vivalto3gvn/rootdir/init.scx15_ss.rc:root/init.scx15_ss.rc \
+	device/samsung/vivalto3gvn/rootdir/init.vivalto3gvn.rc:root/init.vivalto3gvn.rc \
+	device/samsung/vivalto3gvn/rootdir/init.vivalto3gvn_base.rc:root/init.vivalto3gvn_base.rc \
+	device/samsung/vivalto3gvn/rootdir/init.wifi.rc:root/init.wifi.rc \
+	device/samsung/vivalto3gvn/rootdir/fstab.scx15:root/fstab.scx15 \
+	device/samsung/vivalto3gvn/rootdir/init.board.rc:root/init.board.rc \
+	device/samsung/vivalto3gvn/rootdir/init.scx15.rc:root/init.scx15.rc \
+	device/samsung/vivalto3gvn/rootdir/init.scx15.usb.rc:root/init.scx15.usb.rc \
+	device/samsung/vivalto3gvn/rootdir/ueventd.scx15.rc:root/ueventd.scx15.rc \
+        device/samsung/vivalto3gvn/rootdir/init.recovery.scx15.rc:root/init.recovery.scx15.rc
 
 PRODUCT_COPY_FILES += \
-    	device/samsung/vivalto3gvndx/rootdir/etc/extra.fstab:recovery/root/etc/extra.fstab
+    	device/samsung/vivalto3gvn/rootdir/etc/extra.fstab:recovery/root/etc/extra.fstab
 
 # Override phone-hdpi-512-dalvik-heap to match value on stock
 # - helps pass CTS com.squareup.okhttp.internal.spdy.Spdy3Test#tooLargeDataFrame)
@@ -57,7 +57,7 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 #ro.debuggable=1 
 
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_vivalto3gvndx
-PRODUCT_DEVICE := vivalto3gvndx
+PRODUCT_NAME := full_vivalto3gvn
+PRODUCT_DEVICE := vivalto3gvn
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G313HZ

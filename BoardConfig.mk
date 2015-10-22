@@ -15,7 +15,7 @@
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
--include vendor/samsung/vivalto3gvndx/BoardConfigVendor.mk
+-include vendor/samsung/vivalto-common/BoardConfigVendor.mk
 
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
@@ -28,7 +28,7 @@ TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
-TARGET_BOOTLOADER_BOARD_NAME := vivalto3gvndx
+TARGET_BOOTLOADER_BOARD_NAME := vivalto3gvn
 
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
 BOARD_KERNEL_BASE := 0x00000000
@@ -54,13 +54,13 @@ BOARD_DATA_FILESYSTEM := ext4
 BOARD_DATA_FILESYSTEM_OPTIONS := rw
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/vivalto3gvndx/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/vivalto3gvn/bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/vivalto3gvndx/bluetooth/libbt_vndcfg.txt
+BOARD_BLUEDROID_VENDOR_CONF := device/samsung/vivalto3gvn/bluetooth/libbt_vndcfg.txt
 
 # Hardware rendering
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/samsung/vivalto3gvndx/egl.cfg
+BOARD_EGL_CFG := device/samsung/vivalto3gvn/egl.cfg
 BOARD_USE_MHEAP_SCREENSHOT := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -102,8 +102,8 @@ TW_FLASH_FROM_STORAGE := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/platform/sec-thermistor/temperature"
 TWHAVE_SELINUX := true
-TARGET_RECOVERY_INITRC := device/samsung/vivalto3gvndx/etc/init.r
-TARGET_RECOVERY_FSTAB := device/samsung/vivalto3gvndx/etc/vivalto3gvndx.fstab
+TARGET_RECOVERY_INITRC := device/samsung/vivalto3gvn/etc/init.r
+TARGET_RECOVERY_FSTAB := device/samsung/vivalto3gvn/etc/vivalto3gvn.fstab
 TW_HAS_DOWNLOAD_MODE := true
 DEVICE_RESOLUTION := 480x800
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
