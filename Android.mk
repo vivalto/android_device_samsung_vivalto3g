@@ -1,3 +1,3 @@
-ifeq ($(TARGET_DEVICE),vivalto3gvndx)
+ifeq ($(TARGET_DEVICE),vivalto3gvn)
     include $(all-subdir-makefiles)
 endif

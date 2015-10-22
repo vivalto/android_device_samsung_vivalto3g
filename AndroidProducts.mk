@@ -18,4 +18,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_vivalto3gvndx.mk
+    $(LOCAL_DIR)/full_vivalto3gvn.mk

@@ -1,7 +1,7 @@
 Copyright 2014 - The CyanogenMod Project
 ===================================
 
-Device configuration for Samsung Galaxy V SM-G313HZ (vivalto)
+Device configuration for Samsung Galaxy V SM-G313HZ (vivalto3gvn)
 
                        instruction how to build
 
@@ -15,19 +15,19 @@ beacause it wont eat your RAM and build will be faster
 
 
 After you finshed repo sync go in your working dir/device/
-and create folder /samsung/vivalto3gvndx and copy content of vivalto3gvndx
+and create folder /samsung/vivalto3gvn and copy content of vivalto3gvn
 that you downloaded from here.
 
 For build recovery, run this command in terminal from your working dir 
 
         . build/envsetup.sh
-        lunch cm_vivalto3gvndx-userdebug && make recoveryimage
+        lunch cm_vivalto3gvn-userdebug && make recoveryimage
 
-Your build will start and you will find your recovery.img in your working dir/out/target/product/vivalto3gvndx
+Your build will start and you will find your recovery.img in your working dir/out/target/product/vivalto3gvn
 
 To make it flashable via ODIN you have to make it recovery.tar.md5
 Navigate with terminal where you save your recovey.img .
-For example cd android/out/target/product/vivalto3gvndx
+For example cd android/out/target/product/vivalto3gvn
 where android is name of your working dir
 and run command:
 
@@ -39,7 +39,7 @@ An now you got recovery.tar.md5 ready to be flashed usin ODIN selected as PDA fi
 
 And for build rom, run this command in terminal from your working dir 
 
-        . build/envsetup.sh && brunch vivalto3gvndx
+        . build/envsetup.sh && brunch vivalto3gvn
 
 Good luck and Happy building. (^_^)/
 
