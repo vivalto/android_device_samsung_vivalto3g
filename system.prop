@@ -86,3 +86,6 @@ ro.config.dha_margin_min_extra=10
 persist.eons.enabled=true
 
 persist.sys.sprd.modemreset=0
+
+# Low memory device
+ro.config.low_ram=true
