@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+DEVICE_PATH := device/samsung/vivalto3gvn
+
 USE_CAMERA_STUB := true
 
 # inherit from the proprietary version
@@ -54,13 +56,13 @@ BOARD_DATA_FILESYSTEM := ext4
 BOARD_DATA_FILESYSTEM_OPTIONS := rw
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/vivalto3gvn/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUEDROID_VENDOR_CONF := device/samsung/vivalto3gvn/bluetooth/libbt_vndcfg.txt
+BOARD_BLUEDROID_VENDOR_CONF := $(DEVICE_PATH)/bluetooth/libbt_vndcfg.txt
 
 # Hardware rendering
 USE_OPENGL_RENDERER := true
-BOARD_EGL_CFG := device/samsung/vivalto3gvn/egl.cfg
+BOARD_EGL_CFG := $(DEVICE_PATH)/egl.cfg
 BOARD_USE_MHEAP_SCREENSHOT := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
@@ -69,7 +71,7 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 COMMON_GLOBAL_CFLAGS += -DMR0_CAMERA_BLOB -DEGL_NEEDS_FNW -DMR0_AUDIO_BLOB -DSAMSUNG_BCM_AUDIO_BLOB -DSCX15_HWC
 
 # kernel
-TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilt/kernel
 
 # Recovery
 BOARD_HAS_NO_REAL_SDCARD := true
@@ -102,8 +104,8 @@ TW_FLASH_FROM_STORAGE := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/platform/sec-thermistor/temperature"
 TWHAVE_SELINUX := true
-TARGET_RECOVERY_INITRC := device/samsung/vivalto3gvn/etc/init.r
-TARGET_RECOVERY_FSTAB := device/samsung/vivalto3gvn/etc/vivalto3gvn.fstab
+TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/etc/init.r
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/etc/vivalto3gvn.fstab
 TW_HAS_DOWNLOAD_MODE := true
 DEVICE_RESOLUTION := 480x800
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_10x18.h\"
