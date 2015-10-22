@@ -19,24 +19,20 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/samsung/vivalto-common/vivalto-common-vendor.mk)
 
-# overrlay import
-#DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay       #currently disabled arent where we improve this to ride up
+#DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# This device is hdpi.  However the platform doesn't
-# currently contain all of the bitmaps at hdpi density so
-# we do this little trick to fall back to the mdpi version
-# if the hdpi doesn't exist.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-
-PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi nodpi
+# This device is hdpi
+PRODUCT_AAPT_CONFIG := normal hdpi
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
+
 # languages
-PRODUCT_LOCALES := en_US fr_FR it_IT es_ES de_DE nl_NL cs_CZ pl_PL ja_JP zh_TW zh_CN ru_RU ko_KR nb_NO es_US da_DK el_GR tr_TR pt_PT pt_BR rm_CH sv_SE bg_BG ca_ES en_GB fi_FI hi_IN hr_HR hu_HU in_ID iw_IL lt_LT lv_LV ro_RO sk_SK sl_SI sr_RS uk_UA vi_VN tl_PH ar_EG fa_IR th_TH sw_TZ ms_MY af_ZA zu_ZA am_ET hi_IN
-
-PRODUCT_LOCALES += hdpi
-
-$(call inherit-product, build/target/product/full.mk)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.locale.language=en \
+    ro.product.locale.region=GB
 
 # Init files
 PRODUCT_COPY_FILES += \
