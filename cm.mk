@@ -8,7 +8,7 @@ PRODUCT_RELEASE_NAME := vivalto3gvn
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/samsung/vivalto3gv/full_vivalto3gvn.mk)
+$(call inherit-product, $(LOCAL_PATH)/full_vivalto3gvn.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := vivalto3gvn
