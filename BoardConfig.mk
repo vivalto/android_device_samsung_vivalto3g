@@ -82,7 +82,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := SM-G313HZ, sm-g313hz, vivalto3gvn, vivalto3gvndx
+TARGET_OTA_ASSERT_DEVICE := vivalto3gvn,SM-G313HZ
 
 # graphics
 ## TARGET_GPU_PP_CORE := 2
@@ -106,7 +106,7 @@ TW_FLASH_FROM_STORAGE := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/platform/sec-thermistor/temperature"
 TWHAVE_SELINUX := true
-TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/etc/init.r
+TARGET_RECOVERY_INITRC := $(DEVICE_PATH)/etc/init.rc
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/etc/vivalto3gvn.fstab
 TW_HAS_DOWNLOAD_MODE := true
 DEVICE_RESOLUTION := 480x800
