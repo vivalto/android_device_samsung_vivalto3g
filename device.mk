@@ -17,7 +17,7 @@ LOCAL_PATH := device/samsung/vivalto3gvn
 # The gps config appropriate for this device
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/samsung/vivalto-common/vivalto-common-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/vivalto3gvn/vivalto3gvn-vendor.mk)
 
 #DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 

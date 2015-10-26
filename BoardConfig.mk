@@ -14,10 +14,8 @@
 
 DEVICE_PATH := device/samsung/vivalto3gvn
 
-USE_CAMERA_STUB := true
-
 # inherit from the proprietary version
--include vendor/samsung/vivalto-common/BoardConfigVendor.mk
+-include vendor/samsung/vivalto3gvn/BoardConfigVendor.mk
 
 # Platform
 TARGET_ARCH := arm
