@@ -16,6 +16,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from fortuna3g device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Keylayouts
+PRODUCT_COPY_FILES += \
+	device/samsung/vivalto3gvn/keylayouts/ist30xx_ts_input.kl:system/usr/keylayout/ist30xx_ts_input.kl
+
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+	setup_fs \
+	e2fsck \
+	f2fstat \
+	fsck.f2fs \
+	fibmap.f2fs \
+	mkfs.f2fs
+
+# Support for Browser's saved page feature. This allows
+# for pages saved on previous versions of the OS to be
+# viewed on the current OS.
+PRODUCT_PACKAGES += \
+    libskia_legacy
+
+$(call inherit-product, hardware/broadcom/wlan/bcmdhd/config/config-bcm.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
 # Set those variables here to overwrite the inherited values.
 PRODUCT_NAME := full_vivalto3gvn
 PRODUCT_DEVICE := vivalto3gvn
