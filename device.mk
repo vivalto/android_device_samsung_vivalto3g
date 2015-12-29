@@ -34,6 +34,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.locale.language=en \
     ro.product.locale.region=GB
 
+# sprd HAL modules
+PRODUCT_PACKAGES += \
+	lights.scx15 \
+	gralloc.scx15 \
+	camera.scx15 \
+	camera2.scx15 \
+	audio.primary.scx15 \
+	audio_policy.scx15 \
+	hwcomposer.scx15
+
 # Init files
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/rootdir/init.scx15_ss.rc:root/init.scx15_ss.rc \
